@@ -12,14 +12,16 @@ export default function App() {
   return (
     <>
       <Nav />
+      <main>
       {
-        navigation.state === 'idle' ?
-        <Outlet />
-        :
-        <div className='centered'>
-          <Spinner animation='border' />
-        </div>
-        }
+      navigation.state === 'idle' ?
+      <Outlet />
+      :
+      <div className='centered'>
+        <Spinner animation='border' />
+      </div>
+      }
+      </main>
     </>
   )
 }

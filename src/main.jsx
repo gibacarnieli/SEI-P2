@@ -2,13 +2,15 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // styles
+import './styles/main.scss'
 
 //components
 import App from './App.jsx'
 import Chars from './components/Chars'
+import SingleChar from './components/SingleChar'
 
 //loaders
-import { getAllChars } from './utils/loaders/charload'
+import { getAllChars, getSingleChar } from './utils/loaders/charload'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,14 @@ const router = createBrowserRouter([
       {
         path: '/characters',
         element: <Chars />,
-        loader: getAllChars
+        loader: getAllChars,
+        children: [
+          {
+            path: '/characters/:charId',
+            element: <SingleChar />,
+            loader: async ({ params }) => getSingleChar(params.charId)
+          }
+        ]
       }
     ]
   }

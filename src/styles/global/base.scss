@@ -5,8 +5,18 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+  background-image: url(../../../src/assets/wallpaper.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   color: $green;
+}
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 main{
@@ -14,16 +24,30 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 60%;
+  min-height: calc(100vh - 110px);
+}
+.charImg{
+  max-width: 270px;
 }
 
 .sections{
   display: flex;
   flex-wrap: wrap;
   width: 70%;
-  justify-content: center;
 } 
 .sections a{
   width: 50%;
+}
+.episodeCont{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.episodeCont section{
+  @include card;
+  max-width: 50%;
 }
 .sections section {
   @include card;
@@ -59,5 +83,5 @@ img{
 .formCont{
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: 60px 0;
 }

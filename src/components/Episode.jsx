@@ -8,15 +8,14 @@ export default function Episode(){
     <>
       <h1>{episode} {name}</h1>
         <h2 className="cast">Cast</h2>
-        <div className="sections">
-        {console.log(ep[1])}
+        <div className="episodeCont">
         {ep[1].map(e => {
           const {id, name: charName, image} = e
           return (
             <section key={id}>
               <Link to={`/characters/${id}`}>
                 <h3>{charName}</h3>
-                <img src={image} alt={`Image of ${charName}`} />
+                <img className="charImg" src={image} alt={`Image of ${charName}`} />
               </Link>
             </section>
             )

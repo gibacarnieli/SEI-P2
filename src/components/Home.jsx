@@ -26,7 +26,7 @@ export default function Home(){
           <Link key={id} to={`/characters/${id}`}>
             <section>
               <h2>{name}</h2>
-              <img src={image} alt="Character Image" />
+              <img className="charImg" src={image} alt="Character Image" />
             </section>
           </Link>
         )

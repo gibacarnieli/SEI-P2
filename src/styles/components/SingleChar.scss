@@ -7,6 +7,7 @@
 .char{
   @include card;
   width: 70%;
+  min-width: 370px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -20,6 +21,8 @@
   justify-content: center;
   background-color: $lightblue;
   padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 3px $lightgreen;
 }
 
 .eps a{

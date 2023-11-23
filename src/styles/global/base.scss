@@ -1,0 +1,63 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: $green;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sections{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+} 
+.sections a{
+  width: 50%;
+}
+.sections section {
+  @include card;
+}
+h1{
+  font-weight: 200;
+  font-size: 2.5em;
+}
+h2, h3{
+  color: $lightgreen;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 0px 0px $lightblue;
+}
+.cast{
+  color: $green;
+  box-shadow: none;
+}
+
+a{
+  text-decoration: none;
+  color: $green;
+  &:hover{
+    cursor: pointer;
+    transition: width 0.2s;
+  }
+}
+
+img{
+  border-radius: 300px;
+  border: 5px solid $lightblue;
+}
+
+.formCont{
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}

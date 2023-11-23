@@ -1,0 +1,24 @@
+
+.formCont{
+  width: 100%;
+}
+form{
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+input{
+  width: 70%;
+  @include form;
+  color: black;
+  padding-left: 30px;
+}
+input::placeholder{
+  color: $blue;
+}
+button{
+  @include form;
+  width: 15%;
+  background-color: $lightgreen;
+}

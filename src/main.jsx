@@ -8,9 +8,12 @@ import './styles/main.scss'
 import App from './App.jsx'
 import Chars from './components/Chars'
 import SingleChar from './components/SingleChar'
+import Episode from './components/Episode'
+import Home from './components/Home'
 
 //loaders
-import { getAllChars, getSingleChar } from './utils/loaders/charload'
+import { getAllChars, getSingleChar } from './utils/loaders/charLoad'
+import { getEpisode } from './utils/loaders/epLoad'
 
 const router = createBrowserRouter([
   {
@@ -18,16 +21,24 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+        index: true,
+        element: <Home />,
+        loader: getAllChars
+      },
+      {
         path: '/characters',
         element: <Chars />,
         loader: getAllChars,
-        children: [
-          {
-            path: '/characters/:charId',
-            element: <SingleChar />,
-            loader: async ({ params }) => getSingleChar(params.charId)
-          }
-        ]
+      },
+      {
+        path: '/characters/:charId',
+        element: <SingleChar />,
+        loader: async ({ params }) => getSingleChar(params.charId)
+      },
+      {
+        path: '/episode/:epId',
+        element: <Episode />,
+        loader: async ({ params }) => getEpisode(params.epId)
       }
     ]
   }

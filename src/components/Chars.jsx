@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom"
-import { useLoaderData } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 
 export default function Chars(){
   const chars = useLoaderData()
   return (
     <>
       <h1>Characters</h1>
-      <div className="container">
+      <div className="sections">
         {chars && chars.map(page => {
           const { results } = page
           return results.map(char => {

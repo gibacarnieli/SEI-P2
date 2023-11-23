@@ -1,25 +1,6 @@
-*{
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.container{
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 70%;
-} 
-
-.container section {
-  width: 50%;
-}
+@import 'global/variables.scss';
+@import 'global/base.scss';
+@import 'components/Nav.scss';
+@import 'components/SingleChar.scss';
+@import 'components/Home.scss'

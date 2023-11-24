@@ -1,7 +1,7 @@
 # SEI-P2
 General Assembly Project 2 - API consuming app
 
-[RickAndMorty]: https://nemomain.github.io/space-battleships/ 
+[RickAndMorty]: https://showmewhatyougot.netlify.app 
 [githubrepo]: https://github.com/Nemomain/SEI-P2
 
 

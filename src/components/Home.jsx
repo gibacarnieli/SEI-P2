@@ -15,7 +15,7 @@ export default function Home(){
       <input type="text" name="charName" placeholder="Search Your Favourite Character" value={search} onChange={(e) => setSearch(e.target.value)}/>
     </div>
     <div className="sections">
-      {/* Data is an array of 42 pages containing character each so we map through it */}
+      {/* Data is an array of 42 pages containing characters each so we map through it */}
     {data.map(p => {
       // we filter each page for the characters whose name match the search criteria and save them in a single array
       const chars = p.results.filter(r => pattern.test(r.name))

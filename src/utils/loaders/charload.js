@@ -8,6 +8,7 @@ export async function getAllChars() {
       arr.push(getInfo(`?page=${i}`))
     }
     // chat Gpt helped here
+    // Promise.all(arr) this waits for all promises inside to get resolved before returning as a single promise
     return Promise.all(arr)
   } catch (error) {
     console.log(error)

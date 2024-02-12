@@ -1,8 +1,6 @@
 # Rick and Morty
 
-## ReadMe Sections
-
-### Description
+## Description
 
 The project was designed to retrieve data from the Rick and Morty API and display it in a web format. The web application showcases characters from the show, and upon selecting a character from the list, it displays the episodes in which that character appears. Additionally, a search bar is provided to allow users to easily select their favourite character.
 
@@ -107,28 +105,28 @@ Antonio handled coding and debugging, while I focused on researching potential i
 
 Day 1 – We began the day by creating the wireframe. We searched for key elements from the API that we would need and then proceeded to coding. The initial code we wrote focused on selecting data from all 42 pages, as obtained from the return in Insomnia.
 
+<img width="682" alt="Screenshot 2024-02-12 at 18 56 06" src="https://github.com/gibacarnieli/SEI-P2/assets/113900097/e195d08b-8b6e-4533-828a-c33f690dd61f">
+
+
 Day 2 – We completed the remaining sections of the code, which included implementing the characters, enabling navigation to new pages upon clicking, and defining the stylistic elements for our web. We also worked on the logic to extract information for each individual character. 
 The logic to get that single character 
-  try {
-    // all your fetching needs in one place!
-    const res = await fetch(`https://rickandmortyapi.com/api/character/${extra}`)
-    return res.json()
-  } catch (error) {
-    console.log(error)
-  }
-}
 
-Once we had that piece of code running, it was time to code the "/episode/:epid" route. + you need to explain your approach
+<img width="766" alt="Screenshot 2024-02-12 at 18 56 43" src="https://github.com/gibacarnieli/SEI-P2/assets/113900097/b3d011ed-377c-41ba-9db2-a28e280bfabc">
+
+Once we had that piece of code running, it was time to code the "/episode/:epid" route. 
 
 
 In this section of the code, we load information for a single character using the base ID obtained from the API.
 import { Link, useLoaderData } from "react-router-dom"export default function SingleChar(){
 
-
 After completing all of the above, including a component for the Navbar that repeats on every page, we introduced an input on the homepage to enable users to search for any specific character they wish.
 
+<img width="1083" alt="Screenshot 2024-02-12 at 18 57 22" src="https://github.com/gibacarnieli/SEI-P2/assets/113900097/30df93d9-9210-4bad-b85b-d51e8fd5630b">
 
 Finally, we applied some styling. To be honest, the styling code is a bit scattered because we prioritised the logical aspects of the page. We incorporated a nice background picture and chose colours to resemble the aesthetics of the actual cartoon. We researched from the internet the colour palette from this cartoon so we will be able to use it. 
+
+<img width="506" alt="Screenshot 2024-02-12 at 18 57 50" src="https://github.com/gibacarnieli/SEI-P2/assets/113900097/21d1744c-e420-4392-889e-1808d85ba123">
+
 
 ## Challenges
 
@@ -151,7 +149,7 @@ The most persistent bug that posed a challenge was the error caused by our initi
 
 Additionally, we encountered bugs related to route misconfigurations and instances where we forgot to import essential files. While these were teachable moments, none of them were entirely unexpected, and we were able to address them systematically.
 
-## Future Improvments
+## Future Improvements
 
 What seems somewhat nonsensical at the moment is that the "All-characters" page has become redundant after developing the homepage. Given more time, we would eliminate all individual character pages in favour of an episode list.
 
